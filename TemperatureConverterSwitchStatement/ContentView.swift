@@ -59,6 +59,21 @@ struct ContentView: View {
                 .bold()
                 .padding()
             
+            // Output: What to wear!
+            if temperatureInCelsius >= -50.0 && temperatureInCelsius < -20.0 {
+                Text("It's freezing outside! 🥶")
+            } else if temperatureInCelsius >= -20.0 && temperatureInCelsius < 0.0 {
+                Text("Dress warmly!")
+            } else if temperatureInCelsius >= 0.0 && temperatureInCelsius < 10.0 {
+                Text("Need a coat!")
+            } else if temperatureInCelsius >= 10.0 && temperatureInCelsius < 20.0 {
+                Text("Not very cold, not very hot... Perfect!")
+            } else if temperatureInCelsius >= 20.0 && temperatureInCelsius < 30.0 {
+                Text("Warm weather! Wear thin layers.")
+            } else if temperatureInCelsius >= 30.0 && temperatureInCelsius <= 50.0 {
+                Text("Never go out! It's too hot. 🥵")
+            }
+            
             Spacer()
             
         }
